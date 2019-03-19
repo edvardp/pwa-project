@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+</head>
+
+<body>
+    <div>Cabeçalho</div>
+
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+    <!-- libraries -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <!-- app & modules -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/modules/app.controllers.module.js"></script>
+    <script src="scripts/modules/app.routers.module.js"></script>
+
+    <!-- routes -->
+    <script src="scripts/routers/site.router.js"></script>
+    <!-- controllers -->
+    <script src="pages/home/home.controller.js"></script>
+</body>
+
+</html>
