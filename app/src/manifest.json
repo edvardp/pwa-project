@@ -1,0 +1,17 @@
+{
+    "name": "Progressive Web App da Company",
+    "short_name": "PWA Company",
+    "start_url": "/?utm_source=homescreen",
+    "theme_color": "#008080",
+    "background_color": "#008B8B",
+    "display": "standalone",
+    "description": "A PWA that is built",
+    "scope": "/",
+    "lang": "pt-BR",
+    "orientation": "any",
+    "icons": [{
+        "src": "/content/images/random-logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}

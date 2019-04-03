@@ -1,0 +1,34 @@
+{
+    "name": "novo-layout",
+    "version": "1.0.0",
+    "description": "--http-server ./app -p 9001 --cors -o",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "build": "webpack",
+    "dependencies": {
+        "@uirouter/angularjs": "^1.0.22",
+        "angular": "^1.7.8",
+        "bootstrap": "^4.3.1",
+        "express": "^4.16.4",
+        "jquery": "^3.3.1"
+    },
+    "devDependencies": {
+        "http-server": "^0.11.1",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/edvardp/frontend-project.git"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/edvardp/frontend-project/issues"
+    },
+    "homepage": "https://github.com/edvardp/frontend-project#readme"
+}

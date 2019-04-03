@@ -1,33 +1,65 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" lang="pt-BR">
 
 <head>
-    <title></title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
-</head>
+    <!-- TODO -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name=”description” content="Primeiro PWA">
+    <meta name="company" content="company PWA">
+    <meta name="Keywords" content="PWA MVP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#006bba">
+    <title>company - First PWA</title>
+    <link rel="manifest" href="./src/manifest.json">
+    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
-<body>
-    <div>Cabeçalho</div>
+<body class="h-100-vh">
+    <nav class="navbar bg-company navbar-fixed-top mb-2">
+        <a class="navbar-brand text-light float-left" href="#">
+            <img src="./content/images/random-logo.png" class="d-inline-block align-top logo-img" alt="logo company" width="95" height="106" />
+            <span>Espaço do Profissional</span>
+        </a>
+        <div class="dropdown dropdown-pull-right">
+            <a href="#" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-ellipsis-v text-light"></span>
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">
+                    <span class="fa fa-id-badge"></span> Sair
+                </a>
+                <!-- <a class="dropdown-item" href="#">Another action</a> -->
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <div ui-view></div>
     </div>
 
     <!-- libraries -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="./scripts/js/jquery/jquery.min.js"></script>
+    <script src="./scripts/js/angularjs/angular.min.js"></script>
+    <script src="./scripts/js/bootstrap/bootstrap.min.js"></script>
+    <script src="./scripts/js/uirouter/angular-ui-router.min.js"></script>
     <!-- app & modules -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/modules/app.controllers.module.js"></script>
-    <script src="scripts/modules/app.routers.module.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/modules/app.controllers.module.js"></script>
+    <script src="./scripts/modules/app.routers.module.js"></script>
 
     <!-- routes -->
-    <script src="scripts/routers/site.router.js"></script>
+    <script src="./scripts/routers/site.router.js"></script>
     <!-- controllers -->
-    <script src="pages/home/home.controller.js"></script>
+    <script src="./pages/home/home.controller.js"></script>
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(function() {
+                console.log('Service Worker Registrado')
+            })
+    }
+</script>
 
 </html>
