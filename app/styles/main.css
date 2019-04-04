@@ -10,34 +10,38 @@ img {
 
 @media (max-width: 575px) {
     .profile-container {
-        height: 112px;
-        width: 112px;
+        height: 9rem;
+        width: 9rem;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     .profile-container {
-        height: 120px;
-        width: 120px;
+        height: 10rem;
+        width: 10rem;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .profile-container {
-        height: 220px;
-        width: 220px;
+        height: 16rem;
+        width: 16rem;
     }
 }
 
 @media (min-width: 992px) {
     .profile-container {
-        height: 220px;
-        width: 220px;
+        height: 16rem;
+        width: 16rem;
     }
 }
 
+.bg-app {
+    background-color: #138496;
+}
+
 .logo-img {
-    width: 30px;
+    width: 1.8rem;
 }
 
 .profile-container {
@@ -70,20 +74,88 @@ img {
 
 .h-100-vh {
     height: 100vh;
-    ;
 }
 
 .box-shadow {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 .2rem .3rem 0 rgba(0, 0, 0, .16), 0 .4rem .4rem 0 rgba(0, 0, 0, .12);
 }
 
-.gradient {
+.white-gradient {
     background-color: #FFF;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
 }
 
 .color-orange-corp {
     color: rgba(243, 146, 0, .5);
+}
+
+.menu-foot {
+    position: absolute;
+    z-index: 1000;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: #000;
+    /* background: #89bbc3; */
+    justify-content: center;
+    /* align horizontal */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: -100vh;
+}
+
+.btn-menu-foot {
+    font-size: 1.4rem;
+    border-radius: 50%;
+    background-color: #006bba;
+    outline: 0;
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 0.3rem solid rgba(0, 0, 0, .1);
+}
+
+.slide-up {
+    bottom: 0px !important;
+    transition: bottom .3s;
+}
+
+.slide-down {
+    bottom: -100vh !important;
+    transition: bottom .3s;
+}
+
+.slide-up .container-button {
+    margin-top: .4rem;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.slide-down .container-button {
+    margin-top: -2.4rem;
+    background-color: #FFF;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+}
+
+.menu-list li:hover {
+    background: rgba(0, 0, 0, .1) !important;
+    transition: background .3s;
+}
+
+.menu-list li>a {
+    font-size: 1.4rem;
+}
+
+.menu-list li>a:link, .menu-list li>a:visited {
+    color: #FFF;
+    text-decoration: none;
+    transition: background .3s;
+}
+
+.menu-list li>a:hover {
+    color: #DDD !important;
 }
 
 .bg-company {

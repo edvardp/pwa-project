@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="app" lang="pt-BR">
+<html ng-app="app" lang="pt-br">
 
 <head>
     <!-- TODO -->
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name=”description” content="Primeiro PWA">
     <meta name="company" content="company PWA">
     <meta name="Keywords" content="PWA MVP">
@@ -11,15 +13,16 @@
     <meta name="theme-color" content="#006bba">
     <title>company - First PWA</title>
     <link rel="manifest" href="./src/manifest.json">
-    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/css/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body class="h-100-vh">
-    <nav class="navbar bg-company navbar-fixed-top mb-2">
+    <nav class="navbar navbar-light bg-company navbar-fixed-top mb-2">
         <a class="navbar-brand text-light float-left" href="#">
-            <img src="./content/images/random-logo.png" class="d-inline-block align-top logo-img" alt="logo company" width="95" height="106" />
-            <span>Espaço do Profissional</span>
+            <img src="content/images/random-logo.png" class="d-inline-block align-top logo-img" alt="logo funcef">
+            Espaço do Profissional
         </a>
         <div class="dropdown dropdown-pull-right">
             <a href="#" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -27,15 +30,68 @@
             </a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">
-                    <span class="fa fa-id-badge"></span> Sair
+                    <span class="fa fa-id-badge"></span>
+                    Sair
                 </a>
-                <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                <a class="dropdown-item" href="#">Another action</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div ui-view></div>
+    </div>
+
+    <div class="push-bottom mb-5"></div>
+
+    <div class="row">
+        <div class="menu-foot bg-company slide-down text-light">
+            <div class="container-button text-center mb-2 bg-company">
+                <button type="button" class="btn-menu-foot btn btn-company text-light">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+            <div class="container-menu-items mt-5">
+                <ul class="menu-list list-group list-group-flush">
+                    <li class="list-group-item bg-company">
+                        <a href="#" class="d-block">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="fa fa-address-card"></span>
+                                </div>
+                                <div class="col-10">
+                                    Informações Profissionais
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-company">
+                        <a href="#" class="d-block">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="fa fa-money-check"></span>
+                                </div>
+                                <div class="col-10">
+                                    Contracheque
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-company">
+                        <a href="#" class="d-block">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="fa fa-smile"></span>
+                                </div>
+                                <div class="col-10">
+                                    Solicitação de Férias
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- libraries -->
@@ -56,10 +112,43 @@
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
-            .then(function() {
+            .then(function () {
                 console.log('Service Worker Registrado')
             })
     }
+
+    function montarMenu() {
+        let menu = jQuery('.menu-foot')
+        let button = jQuery('.btn-menu-foot')
+        button.on('click', function (event) {
+            event.stopPropagation();
+            if (menu.hasClass('slide-up')) {
+                menu.addClass('slide-down', 1000, 'easeOutBounce')
+                    .removeClass('slide-up')
+                button.find('span')
+                    .removeClass('fa-times')
+                    .addClass('fa-bars')
+                jQuery('body').addClass('overflow-hidden')
+            } else {
+                menu.removeClass('slide-down')
+                    .addClass('slide-up', 1000, 'easeOutBounce')
+                button.find('span')
+                    .removeClass('fa-bars')
+                    .addClass('fa-times')
+                jQuery('body').removeClass('overflow-hidden')
+            }
+        })
+    }
+    
+    function criarComportamentoCliqueMenu(){
+        let menuItems = jQuery('.container-menu-items')
+    }
+
+    jQuery(document)
+        .ready(() => {
+            montarMenu()
+
+        });
 </script>
 
 </html>

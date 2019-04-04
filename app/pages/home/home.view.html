@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="card border-0 box-shadow mb-2">
+
+    <div id="card-employee" class="card border-0 box-shadow mb-3">
         <div class="card-body p-1">
             <div class="row">
                 <h5 class="col-sm-12 col-12 text-center">Bem vindo(a), Fulano Siclano</h5>
@@ -7,14 +7,33 @@
                     <div class="profile-container mx-auto mb-2 box-shadow">
                         <img class="profile-img" src="content/images/front-face.jpg" alt="Foto" />
                     </div>
+
+                    <!-- <div class="row text-center">
+                        <p class="col-sm-12 col-12 mb-1">
+                            <strong>Cargo: </strong>
+                            Analista Junior
+                        </p>
+                        <p class="col-sm-12 col-12 mb-1">
+                            <strong>Área: </strong>
+                            XPTO
+                        </p>
+                    </div> -->
+
+                    <div class="text-center">
+                        <button type="button" class="btn btn-light btn-block">
+                            <span class="fa fa-address-card"></span>
+                            Visualizar Informações
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card text-light bg-info border-0 mb-2 box-shadow">
+    <div id="card-info" class="card text-light bg-warning border-0 mb-3 box-shadow">
         <div class="card-header">
-            <span class="fa fa-info-circle"></span> Informativo
+            <span class="fa fa-info-circle"></span>
+            Informativo
             <span class="fa fa-times float-right"></span>
         </div>
         <div class="card-body">
@@ -29,10 +48,18 @@
         </div>
     </div>
 
-    <div class="card border-0 mb-2 bg-light box-shadow">
+    <div id="card-notify" class="card border-0 mb-3 bg-light box-shadow">
         <div class="card-body">
             <div class="card-title mb-0">
-                <span class="fa fa-bell"></span> Notificações
+                <div class="row">
+                    <div class="col-9">
+                        <span class="fa fa-bell"></span>
+                        Notificações
+                    </div>
+                    <div class="col-3">
+                        <span class="badge badge-pill badge-success float-right">1 Nova!</span>
+                    </div>
+                </div>
             </div>
         </div>
         <ul class="list-group list-group-flush">
@@ -40,25 +67,17 @@
                 Hoje
             </li>
             <li class="list-group-item">
-                <span class="fa fa-newspaper"></span> Cras justo odio
+                <span class="fa fa-newspaper"></span>
+                Cras justo odio
             </li>
             <li class="list-group-item bg-light pt-1 pb-1">Última Semana</li>
             <li class="list-group-item">
-                <span class="fa fa-info"></span> Dapibus ac facilisis in
+                <span class="fa fa-info"></span>
+                Dapibus ac facilisis in
             </li>
             <li class="list-group-item">
-                <span class="fa fa-file-alt"></span> Vestibulum at eros
+                <span class="fa fa-file-alt"></span>
+                Vestibulum at eros
             </li>
         </ul>
     </div>
-
-    <div class="push-bottom mb-5"></div>
-
-    <div class="row">
-        <div class="col text-center fixed-bottom gradient">
-            <button type="button" class="btn btn-link btn-block color-orange-corp">
-                    <span class="fa fa-angle-up display-4"></span>
-                </button>
-        </div>
-    </div>
-</div>
