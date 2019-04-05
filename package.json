@@ -1,35 +1,43 @@
 {
-    "name": "novo-layout",
-    "version": "1.0.0",
-    "description": "--http-server ./app -p 9001 --cors -o",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "build": "webpack",
-    "dependencies": {
-        "@uirouter/angularjs": "^1.0.22",
-        "angular": "^1.7.8",
-        "bootstrap": "^4.3.1",
-        "express": "^4.16.4",
-        "jquery": "^3.3.1"
-    },
-    "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.8.1",
-        "http-server": "^0.11.1",
-        "webpack": "^4.29.6",
-        "webpack-cli": "^3.3.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/edvardp/frontend-project.git"
-    },
-    "keywords": [],
-    "bugs": {
-        "url": "https://github.com/edvardp/frontend-project/issues"
-    },
-    "homepage": "https://github.com/edvardp/frontend-project#readme"
+  "name": "novo-layout",
+  "version": "1.0.0",
+  "description": "--http-server ./app -p 9001 --cors -o",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/webpack-env": "^1.13.9",
+    "@uirouter/angularjs": "^1.0.22",
+    "angular": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "babel-loader": "^8.0.5",
+    "http-server": "^0.11.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edvardp/frontend-project.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/edvardp/frontend-project/issues"
+  },
+  "homepage": "https://github.com/edvardp/frontend-project#readme",
+  "presets": [
+    "@babel/preset-env"
+  ]
 }

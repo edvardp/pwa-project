@@ -90,7 +90,7 @@ img {
 }
 
 .menu-foot {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     height: 100vh;
     font-size: 1.2rem;
@@ -116,7 +116,7 @@ img {
 }
 
 .slide-up {
-    bottom: 0px !important;
+    bottom: 0 !important;
     transition: bottom .3s;
 }
 
@@ -148,7 +148,8 @@ img {
     font-size: 1.4rem;
 }
 
-.menu-list li>a:link, .menu-list li>a:visited {
+.menu-list li>a:link,
+.menu-list li>a:visited {
     color: #FFF;
     text-decoration: none;
     transition: background .3s;
@@ -160,4 +161,8 @@ img {
 
 .bg-company {
     background-color: #006bba;
+}
+
+.push-bottom {
+    height: 1rem;
 }

@@ -2,3 +2,6 @@
 
 --Rodar Servidor
 -->node server
+
+--Webpack build
+-->npm run build

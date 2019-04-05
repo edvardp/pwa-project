@@ -1,6 +1,7 @@
 const CACHE_NAME = 'company_PWA_0001';
-const filesToCache = [
-    '/styles/bootstrap/css/bootstrap.min.css',
+const FILESTOCACHE = [
+    '/styles/css/bootstrap/bootstrap.min.css',
+    '/styles/css/fontawesome-free/css/all.css',
     '/styles/main.css',
     '/scripts/js/jquery/jquery.min.js',
     '/scripts/js/angularjs/angular.min.js',
@@ -17,13 +18,13 @@ const filesToCache = [
 ]
 
 this.addEventListener('install', event => {
-    this.skipWaiting()
+    // this.skipWaiting()
 
     event.waitUntil(
         caches.open(CACHE_NAME)
         .then(cache => {
             console.log('Opened cache')
-            return cache.addAll(filesToCache)
+            return cache.addAll(FILESTOCACHE)
         })
     )
 })
