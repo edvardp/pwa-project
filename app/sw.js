@@ -1,20 +1,11 @@
 const CACHE_NAME = 'company_PWA_0001';
 const FILESTOCACHE = [
-    '/styles/css/bootstrap/bootstrap.min.css',
-    '/styles/css/fontawesome-free/css/all.css',
-    '/styles/main.css',
-    '/scripts/js/jquery/jquery.min.js',
-    '/scripts/js/angularjs/angular.min.js',
-    '/scripts/js/bootstrap/bootstrap.min.js',
-    '/scripts/js/uirouter/angular-ui-router.min.js',
-    '/scripts/app.js',
-    '/scripts/modules/app.controllers.module.js',
-    '/scripts/modules/app.routers.module.js',
-    '/scripts/routers/site.router.js',
-    '/content/images/random-logo.png',
-    '/pages/home/home.controller.js',
-    '/pages/home/home.view.html',
-    '/pages/offline/index.html'
+    './styles/css/bootstrap/bootstrap.min.css',
+    './styles/css/fontawesome-free/css/all.css',
+    './styles/main.css',
+    './content/images/random-logo.png',
+    './pages/home/home.view.html',
+    './pages/offline/index.html'
 ]
 
 this.addEventListener('install', event => {

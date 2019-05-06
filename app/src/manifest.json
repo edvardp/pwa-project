@@ -10,7 +10,7 @@
     "lang": "pt-BR",
     "orientation": "any",
     "icons": [{
-        "src": "/content/images/random-logo.png",
+        "src": "../content/images/random-logo.png",
         "sizes": "512x512",
         "type": "image/png"
     }]

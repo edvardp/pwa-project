@@ -11,8 +11,7 @@
 
         vm.alert = alert;
 
-        function alert(){
-            console.log('teste');
-        }
+
+        console.log('teste');
     }
 })()

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
-<body class="h-100-vh">
+<body class="h-100-vh" ng-cloak>
     <nav class="navbar navbar-light bg-company navbar-fixed-top mb-2">
         <a class="navbar-brand text-light float-left" href="#">
             <img src="content/images/random-logo.png" class="d-inline-block align-top logo-img" alt="logo funcef"> Espaço do Profissional
@@ -106,50 +106,51 @@
     <!-- controllers -->
     <!-- <script src="./pages/home/home.controller.js"></script> -->
     <script src="./dist/main.js"></script>
-</body>
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-            .then(function() {
-                console.log('Service Worker Registrado')
-            })
-    }
 
-    function montarMenu() {
-        let menu = jQuery('.menu-foot')
-        let button = jQuery('.btn-menu-foot')
-        let itemMenu = jQuery('.item-menu')
-        button.on('click', function(event) {
-            abrirFecharMenu(event, menu, button);
-        })
-        itemMenu.on('click', function(event) {
-            abrirFecharMenu(event, menu, button);
-        })
-    }
-
-    function abrirFecharMenu(event, menu, button) {
-        event.stopPropagation();
-        if (menu.hasClass('slide-up')) {
-            menu.addClass('slide-down', 1000, 'easeOutBounce')
-                .removeClass('slide-up')
-            button.find('span')
-                .removeClass('fa-times')
-                .addClass('fa-bars')
-            jQuery('body').removeClass('overflow-hidden')
-        } else {
-            menu.removeClass('slide-down')
-                .addClass('slide-up', 1000, 'easeOutBounce')
-            button.find('span')
-                .removeClass('fa-bars')
-                .addClass('fa-times')
-            jQuery('body').addClass('overflow-hidden')
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(function() {
+                    console.log('Service Worker Registrado')
+                })
         }
-    }
 
-    jQuery(document)
-        .ready(() => {
-            montarMenu()
-        });
-</script>
+        function montarMenu() {
+            let menu = jQuery('.menu-foot')
+            let button = jQuery('.btn-menu-foot')
+            let itemMenu = jQuery('.item-menu')
+            button.on('click', function(event) {
+                abrirFecharMenu(event, menu, button)
+            })
+            itemMenu.on('click', function(event) {
+                abrirFecharMenu(event, menu, button)
+            })
+        }
+
+        function abrirFecharMenu(event, menu, button) {
+            event.stopPropagation();
+            if (menu.hasClass('slide-up')) {
+                menu.addClass('slide-down', 1000, 'easeOutBounce')
+                    .removeClass('slide-up')
+                button.find('span')
+                    .removeClass('fa-times')
+                    .addClass('fa-bars')
+                jQuery('body').removeClass('overflow-hidden')
+            } else {
+                menu.removeClass('slide-down')
+                    .addClass('slide-up', 1000, 'easeOutBounce')
+                button.find('span')
+                    .removeClass('fa-bars')
+                    .addClass('fa-times')
+                jQuery('body').addClass('overflow-hidden')
+            }
+        }
+
+        jQuery(document)
+            .ready(() => {
+                montarMenu()
+            });
+    </script>
+</body>
 
 </html>

@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
     context: `${__dirname}`,
     module: {
-
         rules: [{
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
@@ -24,8 +24,12 @@ module.exports = {
     },
     resolve: {
         modules: [
-            "node_modules",
-            path.resolve(__dirname, "app")
+            'node_modules',
+            path.resolve(__dirname, 'app')
         ]
+    },
+    devServer: {
+        port: 3000,
+        contentBase: path.join(__dirname, 'app')
     }
-};
+}
