@@ -1,5 +1,5 @@
 const path = require('path')
-var webpack = require('webpack')
+const webpack = require('webpack')
 
 module.exports = {
     context: `${__dirname}`,
@@ -7,18 +7,11 @@ module.exports = {
         rules: [{
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
-        }],
-        // rules: [{
-        //     test: /\.js$/,
-        //     exclude: /node_modules/,
-        //     use: {
-        //         loader: "babel-loader"
-        //     }
-        // }]
+        }]
     },
     entry: `${__dirname}/src/index.js`,
     output: {
-        filename: 'main.js',
+        filename: 'main.[hash].js',
         path: path.resolve(__dirname, 'app/dist'),
         publicPath: `${__dirname}`
     },

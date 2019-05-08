@@ -1,49 +1,49 @@
 {
-  "name": "novo-layout",
-  "version": "1.0.0",
-  "description": "--http-server ./app -p 9001 --cors -o",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js",
-    "start": "webpack-dev-server --display-modules --open --config webpack.config.js",
-    "build": "webpack --display-modules --config webpack.config.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/webpack-env": "^1.13.9",
-    "@uirouter/angularjs": "^1.0.22",
-    "angular": "^1.7.8",
-    "angular-ui-router": "^1.0.22",
-    "bootstrap": "^4.3.1",
-    "express": "^4.16.4",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.15.0",
-    "webpack-merge": "^4.2.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^2.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "http-server": "^0.11.1",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edvardp/frontend-project.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/edvardp/frontend-project/issues"
-  },
-  "homepage": "https://github.com/edvardp/frontend-project#readme",
-  "presets": [
-    "@babel/preset-env"
-  ]
+    "name": "novo-layout",
+    "version": "1.0.0",
+    "description": "--http-server ./app -p 9001 --cors -o",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js",
+        "start": "webpack-dev-server --display-modules --open --config webpack.dev.js",
+        "build": "webpack --display-modules --config webpack.prod.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/webpack-env": "^1.13.9",
+        "@uirouter/angularjs": "^1.0.22",
+        "angular": "^1.7.8",
+        "angular-ui-router": "^1.0.22",
+        "bootstrap": "^4.3.1",
+        "express": "^4.16.4",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.15.0",
+        "webpack-merge": "^4.2.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "@fortawesome/fontawesome-free": "^5.8.1",
+        "babel-loader": "^8.0.5",
+        "clean-webpack-plugin": "^2.0.1",
+        "html-webpack-plugin": "^3.2.0",
+        "http-server": "^0.11.1",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.3.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/edvardp/frontend-project.git"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/edvardp/frontend-project/issues"
+    },
+    "homepage": "https://github.com/edvardp/frontend-project#readme",
+    "presets": [
+        "@babel/preset-env"
+    ]
 }

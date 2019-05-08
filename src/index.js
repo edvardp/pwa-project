@@ -3,7 +3,7 @@ window.jQuery = $
 window.$ = $
 import "angular"
 import uirouter from "@uirouter/angularjs"
-import "angular-ui-router"
+//import uirouter from "angular-ui-router"
 import "bootstrap"
 import "scripts/app.js"
 

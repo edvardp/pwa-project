@@ -106,7 +106,7 @@
     <!-- <script src="./scripts/routers/site.router.js"></script> -->
     <!-- controllers -->
     <!-- <script src="./pages/home/home.controller.js"></script> -->
-    <script type="text/javascript" src="./dist/main.bundle.js"></script>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.bundlepath %>"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js')

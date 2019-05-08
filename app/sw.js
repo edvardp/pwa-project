@@ -5,7 +5,8 @@ const FILESTOCACHE = [
     './styles/main.css',
     './content/images/random-logo.png',
     './pages/home/home.view.html',
-    './pages/offline/index.html'
+    './pages/offline/index.html',
+    './dist/main.bundle.js'
 ]
 
 this.addEventListener('install', event => {
