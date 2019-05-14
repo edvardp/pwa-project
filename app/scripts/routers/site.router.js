@@ -1,5 +1,5 @@
 (() => {
-    angular.module('app')
+    angular.module('app.routers')
         .config(['$stateProvider', '$urlRouterProvider',
             function($stateProvider, $urlRouterProvider) {
 

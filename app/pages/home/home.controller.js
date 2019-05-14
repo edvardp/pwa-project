@@ -1,5 +1,5 @@
 (() => {
-    angular.module('app')
+    angular.module('app.controllers')
         .controller('HomeController', HomeController)
 
     HomeController.$inject = []
@@ -9,9 +9,11 @@
 
         vm.hello = "Hello World"
 
-        vm.alert = alert;
+        vm.alert = alertLegal;
 
+        function alertLegal() {
+            alert('alert');
+        }
 
-        console.log('teste');
     }
 })()
