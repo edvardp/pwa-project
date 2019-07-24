@@ -1,17 +1,16 @@
 (() => {
     angular.module('app.routers')
-        .config(['$stateProvider', '$urlRouterProvider',
-            function($stateProvider, $urlRouterProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', runRouter])
 
-                $urlRouterProvider.otherwise('/home')
+    function runRouter($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/home')
 
-                $stateProvider
-                    .state('home', {
-                        url: '/home',
-                        templateUrl: './pages/home/home.view.html',
-                        controller: 'HomeController',
-                        controllerAs: 'vm'
-                    })
-            }
-        ])
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: './pages/home/home.view.html',
+                controller: 'HomeController',
+                controllerAs: 'vm'
+            })
+    }
 })()
